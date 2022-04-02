@@ -1,18 +1,24 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
+
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-		<RouterLink to="/art">art</RouterLink>
+		<RouterLink to="/entry">Entry</RouterLink>
+        <RouterLink to="/art">A R T</RouterLink>
+        <RouterLink to="/art">A R T</RouterLink>
+        <RouterLink to="/art">A R T</RouterLink>
+        <RouterLink to="/art">A R T</RouterLink>
+        <RouterLink to="/art">A R T</RouterLink>
+        <RouterLink to="/art">A R T</RouterLink>
+        <RouterLink to="/art">A R T</RouterLink>
       </nav>
     </div>
   </header>
@@ -24,6 +30,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 @import '@/assets/base.css';
 
 #app {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -34,11 +41,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
 header {
   line-height: 1.5;
   max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
 }
 
 a,
@@ -80,16 +82,15 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  body {
+  /* body {
     display: flex;
     place-items: center;
-  }
+  } */
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  /* #app {
+    display: flex;
     padding: 0 2rem;
-  }
+  } */
 
   header {
     display: flex;
@@ -98,14 +99,12 @@ nav a:first-of-type {
   }
 
   header .wrapper {
+    width: 100vw;
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
 
   nav {
     text-align: left;
