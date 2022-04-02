@@ -1,0 +1,17 @@
+{
+  "name": "odoo-hackathon",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host 192.168.1.36",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
+  },
+  "dependencies": {
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "vite": "^2.9.1"
+  }
+}
