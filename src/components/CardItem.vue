@@ -4,7 +4,7 @@ export default {
     icon: {
       type: String,
       required: true,
-      default: "https://www.pikpng.com/pngl/m/105-1052172_png-file-svg-transparent-background-education-icon-clipart.png",
+      default: "https://img.icons8.com/color/344/courses.png",
     },
     title: {
       type: String,
@@ -115,7 +115,7 @@ export default {
 
 img {
   display: inline-block;
-  filter: brightness(100%);
+  /* filter: brightness(0) invert(1); */
   margin: 1em;
   border-radius: 0.2em;
   width: 3em;
