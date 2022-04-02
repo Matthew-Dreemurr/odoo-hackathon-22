@@ -2,8 +2,24 @@
 export default
 {
 	props: {
-		icon_src: String,
-		title: String,
+		icon_src: {
+			type: String,
+			required: true,
+		},
+		title: {
+			type: String,
+			required: true,
+			default: "Default Title"
+		},
+		tags_array: {
+			type: Array,
+			default: [],
+		}
+	},
+  data(){
+		return {
+
+		}
 	}
 }
 </script>
@@ -25,6 +41,12 @@ export default
 
 <style scoped>
 
+h1 {
+	
+}
 
+card-div {
+
+}
 
 </style>

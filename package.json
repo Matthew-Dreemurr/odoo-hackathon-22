@@ -2,12 +2,12 @@
   "name": "odoo-hackathon",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --host 192.168.1.36",
+    "dev": "vite --host 192.168.1.36 --port 4281",
     "build": "vite build",
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
-    "@syncfusion/ej2-vue-dropdowns": "^19.4.56",
+    "@vueform/multiselect": "^2.3.3",
     "vue": "^3.2.31",
     "vue-multiselect": "^2.1.6",
     "vue-router": "^4.0.14"
