@@ -1,0 +1,3 @@
+[submodule "cursus"]
+	path = cursus
+	url = git@github.com:Matthew-Dreemurr/cursus.git
