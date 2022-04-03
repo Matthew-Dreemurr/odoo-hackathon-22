@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+import wish_graph from '../views/wish_graph.vue'
 import CoursesView from '../views/CoursesView.vue'
 import Modify from '../views/Modify.vue'
 import entry from '../views/entry.vue'
@@ -29,6 +31,11 @@ const router = createRouter({
 	  path: '/entry',
 	  name: 'entry',
 	  component: entry
+	},
+	{
+	  path: '/wish_graph',
+	  name: 'wish_graph',
+	  component: wish_graph
 	},
   {
     path: "/course/dummy",
