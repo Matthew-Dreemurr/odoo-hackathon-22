@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import art from '../views/art.vue'
 import entry from '../views/entry.vue'
+import wish_graph from '../views/wish_graph.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,15 +20,15 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
 	{
-	  path: '/art',
-	  name: 'art',
-	  component: art
-	},
-	{
 	  path: '/entry',
 	  name: 'entry',
 	  component: entry
-	}
+	},
+	{
+	  path: '/wish_graph',
+	  name: 'wish_graph',
+	  component: wish_graph
+	},
   ]
 })
 
