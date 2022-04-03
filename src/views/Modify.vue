@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Here you can suggest modifications using Github Pull Requests</h1>
-    <a href="https://github.com/Matthew-Dreemurr/cursus/edit/master/test.tex"
+    <a href="https://github.com/Matthew-Dreemurr/cursus/edit/master/tex/test.tex"
       >propose changes</a
     >
   </div>

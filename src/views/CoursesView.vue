@@ -97,7 +97,7 @@ export default {
          {
           icon: "https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/344/external-biology-nature-and-ecology-smashingstocks-circular-smashing-stocks.png",
           title: "Biology",
-          description: "We mix some stuff to make some other stuff.",
+          description: "Studying living things.",
           tags_array: [
             { text: "Chemistry", style: "background-color: #008888;" },
             { text: "Not so Boring", style: "background-color: #008888;" },
@@ -122,56 +122,42 @@ export default {
           ],
         },
         {
-          title: "Dummy",
-          description: "Lorem ipsum dolor sit amet",
           tags_array: [
             { text: "Tag", style: "background-color: #008888;" },
             { text: "Another Tag", style: "background-color: #008888;" },
           ],
         },
         {
-          title: "Dummy",
-          description: "Lorem ipsum dolor sit amet",
           tags_array: [
             { text: "Tag", style: "background-color: #008888;" },
             { text: "Another Tag", style: "background-color: #008888;" },
           ],
         },
         {
-          title: "Dummy",
-          description: "Lorem ipsum dolor sit amet",
           tags_array: [
             { text: "Tag", style: "background-color: #008888;" },
             { text: "Another Tag", style: "background-color: #008888;" },
           ],
         },
         {
-          title: "Dummy",
-          description: "Lorem ipsum dolor sit amet",
           tags_array: [
             { text: "Tag", style: "background-color: #008888;" },
             { text: "Another Tag", style: "background-color: #008888;" },
           ],
         },
         {
-          title: "Dummy",
-          description: "Lorem ipsum dolor sit amet",
           tags_array: [
             { text: "Tag", style: "background-color: #008888;" },
             { text: "Another Tag", style: "background-color: #008888;" },
           ],
         },
         {
-          title: "Dummy",
-          description: "Lorem ipsum dolor sit amet",
           tags_array: [
             { text: "Tag", style: "background-color: #008888;" },
             { text: "Another Tag", style: "background-color: #008888;" },
           ],
         },
         {
-          title: "Dummy",
-          description: "Lorem ipsum dolor sit amet",
           tags_array: [
             { text: "Tag", style: "background-color: #008888;" },
             { text: "Another Tag", style: "background-color: #008888;" },
