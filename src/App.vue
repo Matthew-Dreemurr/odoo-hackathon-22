@@ -10,15 +10,10 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <!-- <RouterLink to="/entry">Entry</RouterLink> -->
+        <RouterLink to="/art">Modify</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/entry">Entry</RouterLink>
-        <RouterLink to="/art">A R T</RouterLink>
-        <RouterLink to="/art">A R T</RouterLink>
-        <RouterLink to="/art">A R T</RouterLink>
-        <RouterLink to="/art">A R T</RouterLink>
-        <RouterLink to="/art">A R T</RouterLink>
-        <RouterLink to="/art">A R T</RouterLink>
-        <RouterLink to="/art">A R T</RouterLink>
+
       </nav>
     </div>
   </header>
@@ -39,7 +34,8 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 header {
-  line-height: 1.5;
+  padding: 1em;
+  /* line-height: 1.5; */
   max-height: 100vh;
 }
 
@@ -58,7 +54,7 @@ a,
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 2vh;
   text-align: center;
   margin-top: 2rem;
 }
@@ -99,9 +95,9 @@ nav a:first-of-type {
   }
 
   header .wrapper {
-    width: 100vw;
+    width: 100%;
     display: flex;
-    place-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
   }
 
