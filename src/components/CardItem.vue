@@ -3,7 +3,6 @@ export default {
   props: {
     icon: {
       type: String,
-      required: true,
       default: "https://img.icons8.com/color/344/courses.png",
     },
     title: {
@@ -70,15 +69,21 @@ export default {
 </template>
 
 <style scoped>
+
+/* * {
+  border: green solid 1px;
+} */
+
 .card-div {
   color: #dddddd;
   margin: 1em;
   padding: 1em;
   width: 100%;
-  min-width: 25vw;
-  max-width: vw;
+  min-width: 200px;
+  max-width: 20vw;
 
   font-size: small;
+  /* word-break: break-all; */
 
   border-radius: 1em;
 
@@ -86,10 +91,11 @@ export default {
 
   box-shadow: 0 0.2em 2em 0.01em #00000044;
 
-  flex: 1 1;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: center;
 
   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12);
   transform: scale(0.99);
@@ -98,16 +104,20 @@ export default {
 }
 
 .title-div {
-  padding: 1em;
-  padding-left: 0;
   width: 100%;
+  padding: 0.2em;
+  /* width: 100%; */
   display: flex;
   flex-wrap: no-wrap;
   align-items: center;
   justify-content: flex-start;
 }
 
+.title {
+  font-size: 100%;
+}
 .description {
+  margin: 0.01em 1em;
   padding: 1em;
   box-shadow: 0 0 0.5em 0.01em #00000066;
   border-radius: 1em;
@@ -143,7 +153,9 @@ h1 {
   display: inline-block;
   margin: 0.2em;
   padding: 0.2em 0.8em;
+
   text-transform: uppercase;
+  word-break: break-all;
   font-size: 0.6em;
   font-weight: bold;
   text-align: center;
@@ -153,7 +165,7 @@ h1 {
 }
 
 .tag:hover,
-.card-div:hover {
+.card-div:hover{
   transform: scale(105%) translateY(-0.4vh);
   z-index: 1;
 }
