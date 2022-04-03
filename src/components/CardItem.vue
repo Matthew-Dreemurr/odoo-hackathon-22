@@ -41,35 +41,49 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      checked: false,
+    };
+  },
+  methods: {
+    getContributeUrl: () => {
+      return "https://github.com/Matthew-Dreemurr/cursus/edit/master/tex/test.tex";
+    },
+    getCourseUrl: () => {
+      return "course/dummy";
+    },
   },
 };
 </script>
 
 <template>
-  <div class="card-div">
-    <div class="title-div">
-      <img class="module-icon" :src="icon" alt="Module Icon" />
-      <h1 class="title">{{ title }}</h1>
-    </div>
-    <p class="description"><span v-html="description"></span></p>
-    <li class="tags-div">
-      <ul
-        class="tag"
-        v-for="tag in tags_array"
-        :key="tag.text"
-        :style="tag.style"
+  <a :href="getCourseUrl()">
+    <div class="card-div">
+      <div class="title-div">
+        <img class="module-icon" :src="icon" alt="Module Icon" />
+        <h1 class="title">{{ title }}</h1>
+      </div>
+      <p class="description"><span v-html="description"></span></p>
+      <li class="tags-div">
+        <ul
+          class="tag"
+          v-for="tag in tags_array"
+          :key="tag.text"
+          :style="tag.style"
+        >
+          {{
+            tag.text
+          }}
+        </ul>
+      </li>
+      <a class="contribute" :href="getContributeUrl()"
+        >contribute to this course</a
       >
-        {{
-          tag.text
-        }}
-      </ul>
-    </li>
-  </div>
+    </div>
+  </a>
 </template>
 
 <style scoped>
-
 /* * {
   border: green solid 1px;
 } */
@@ -78,7 +92,7 @@ export default {
   color: #dddddd;
   margin: 0.4em;
   padding: 1em;
-  width: min-content;
+  width: fit-content;
   /* max-width: 20vw; */
 
   font-size: normal;
@@ -99,14 +113,18 @@ export default {
   align-items: flex-start;
   justify-content: center;
 
-  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   transform: scale(0.99);
 
   cursor: pointer;
 }
 
+.card-div.selected {
+  border: green solid 2 px;
+  background-color: hsl(120, 100%, 68%);
+}
 .title-div {
-  width: fit-content;
+  width: 100%;
   margin: 0.1em;
   padding: 0.1em;
   /* width: 100%; */
@@ -169,14 +187,22 @@ h1 {
   text-align: center;
   border-radius: 0.4em;
 
-  transition: .8s transform cubic-bezier(.155,1.105,.295,1.12);
+  transition: 0.8s transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
 
 .tag:hover,
 .card-div:hover {
-  border: #dddddd solid 1px;
-
   transform: scale(1.04) translateY(-0.4vh);
   z-index: 1;
+}
+
+.card-div:hover {
+  border: #dddddd solid 1px;
+}
+
+.contribute {
+  font-size: small;
+  width: 100%;
+  text-align: center;
 }
 </style>
