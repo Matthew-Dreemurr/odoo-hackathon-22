@@ -12,7 +12,7 @@ export default {
         {
           icon: "https://img.icons8.com/color/344/over_the_moon.png",
           title: "Rocket Science",
-          description: "Sometimes it goes boom.",
+          description: "Let's go to the moon.",
           tags_array: [
             { text: "Rocket Science", style: "background-color: #008888;" },
             { text: "Science", style: "background-color: #008888;" },
@@ -147,6 +147,38 @@ export default {
           ],
         },
         {
+          title: "Dummy",
+          description: "Lorem ipsum dolor sit amet",
+          tags_array: [
+            { text: "Tag", style: "background-color: #008888;" },
+            { text: "Another Tag", style: "background-color: #008888;" },
+          ],
+        },
+        {
+          title: "Dummy",
+          description: "Lorem ipsum dolor sit amet",
+          tags_array: [
+            { text: "Tag", style: "background-color: #008888;" },
+            { text: "Another Tag", style: "background-color: #008888;" },
+          ],
+        },
+        {
+          title: "Dummy",
+          description: "Lorem ipsum dolor sit amet",
+          tags_array: [
+            { text: "Tag", style: "background-color: #008888;" },
+            { text: "Another Tag", style: "background-color: #008888;" },
+          ],
+        },
+        {
+          title: "Dummy",
+          description: "Lorem ipsum dolor sit amet",
+          tags_array: [
+            { text: "Tag", style: "background-color: #008888;" },
+            { text: "Another Tag", style: "background-color: #008888;" },
+          ],
+        },
+        {
           icon: "https://img.icons8.com/color/344/demolition.png",
           title: "Tags o'plenty",
           description: "Lorem ipsum dolor sit amet",
@@ -213,7 +245,7 @@ export default {
 .Home {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 </style>

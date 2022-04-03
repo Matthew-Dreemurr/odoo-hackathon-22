@@ -76,13 +76,12 @@ export default {
 
 .card-div {
   color: #dddddd;
-  margin: 1em;
+  margin: 0.4em;
   padding: 1em;
-  width: 100%;
-  min-width: 200px;
-  max-width: 20vw;
+  width: min-content;
+  /* max-width: 20vw; */
 
-  font-size: small;
+  font-size: normal;
   /* word-break: break-all; */
 
   border-radius: 1em;
@@ -92,6 +91,9 @@ export default {
   box-shadow: 0 0.2em 2em 0.01em #00000044;
 
   flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: content;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -104,8 +106,9 @@ export default {
 }
 
 .title-div {
-  width: 100%;
-  padding: 0.2em;
+  width: fit-content;
+  margin: 0.1em;
+  padding: 0.1em;
   /* width: 100%; */
   display: flex;
   flex-wrap: no-wrap;
@@ -117,18 +120,22 @@ export default {
   font-size: 100%;
 }
 .description {
-  margin: 0.01em 1em;
-  padding: 1em;
+  width: fit-content;
+  height: fit-content;
+  margin: 0.4em 0;
+  padding: 0.1em 1em;
   box-shadow: 0 0 0.5em 0.01em #00000066;
-  border-radius: 1em;
+  border-radius: 0.4em;
+
+  word-break: break-word;
 }
 
 img {
   display: inline-block;
   /* filter: brightness(0) invert(1); */
-  margin: 1em;
-  border-radius: 0.2em;
-  width: 3em;
+  margin: 0 0.4em;
+  border-radius: 1em;
+  height: 5em;
 }
 
 h1 {
@@ -139,7 +146,8 @@ h1 {
 }
 
 .tags-div {
-  padding: 1em;
+  width: fit-content;
+  padding: 0.1em;
   display: flex;
   flex-wrap: wrap;
 }
@@ -165,8 +173,10 @@ h1 {
 }
 
 .tag:hover,
-.card-div:hover{
-  transform: scale(105%) translateY(-0.4vh);
+.card-div:hover {
+  border: #dddddd solid 1px;
+
+  transform: scale(1.04) translateY(-0.4vh);
   z-index: 1;
 }
 </style>
