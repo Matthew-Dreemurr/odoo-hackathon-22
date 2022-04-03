@@ -12,10 +12,10 @@ export default {
     description: {
       type: String,
       default: `
-      Description, lorem ipsum dolor sit amet brown fox jumped over the lazy dog. <br>
-      <br>This <b>should</b> be on a new line <br>
-      <br>
-      Lorem ipsum dolor sit ametpat.
+Description, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. <br>
+<br>This <b>should</b> be on a new line <br>
+<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 `,
     },
     tags_array: {
@@ -46,10 +46,10 @@ export default {
     };
   },
   methods: {
-    getContributeUrl: () => {
+    getContributeUrl: (title) => {
       return "https://github.com/Matthew-Dreemurr/cursus/edit/master/tex/test.tex";
     },
-    getCourseUrl: () => {
+    getCourseUrl: (title) => {
       return "course/dummy";
     },
   },
@@ -57,8 +57,7 @@ export default {
 </script>
 
 <template>
-  <a :href="getCourseUrl()">
-    <div class="card-div">
+  <a :href="getCourseUrl(title)" class="card-div">
       <div class="title-div">
         <img class="module-icon" :src="icon" alt="Module Icon" />
         <h1 class="title">{{ title }}</h1>
@@ -76,10 +75,9 @@ export default {
           }}
         </ul>
       </li>
-      <a class="contribute" :href="getContributeUrl()"
+      <a class="contribute" :href="getContributeUrl(title)"
         >contribute to this course</a
       >
-    </div>
   </a>
 </template>
 
@@ -97,8 +95,10 @@ export default {
 
   font-size: normal;
   /* word-break: break-all; */
-
   border-radius: 1em;
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: #222222;
 
   background-color: #222222;
 
@@ -113,20 +113,17 @@ export default {
   align-items: flex-start;
   justify-content: center;
 
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  transition: 0.3s all cubic-bezier(0.155, 1.105, 0.295, 1.12);
   transform: scale(0.99);
 
   cursor: pointer;
 }
 
-.card-div.selected {
-  border: green solid 2 px;
-  background-color: hsl(120, 100%, 68%);
-}
 .title-div {
   width: 100%;
   margin: 0.1em;
   padding: 0.1em;
+  text-decoration: none;
   /* width: 100%; */
   display: flex;
   flex-wrap: no-wrap;
@@ -138,10 +135,11 @@ export default {
   font-size: 100%;
 }
 .description {
-  width: fit-content;
+  width: 100%;
   height: fit-content;
   margin: 0.4em 0;
   padding: 0.1em 1em;
+  text-decoration: none;
   box-shadow: 0 0 0.5em 0.01em #00000066;
   border-radius: 0.4em;
 
@@ -182,27 +180,40 @@ h1 {
 
   text-transform: uppercase;
   word-break: break-all;
-  font-size: 0.6em;
+  font-size: 0.8em;
   font-weight: bold;
   text-align: center;
   border-radius: 0.4em;
 
-  transition: 0.8s transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  transition: 0.8s all cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
 
 .tag:hover,
-.card-div:hover {
+.tag:focus,
+.card-div:hover,
+.card-div:focus {
   transform: scale(1.04) translateY(-0.4vh);
   z-index: 1;
 }
 
 .card-div:hover {
-  border: #dddddd solid 1px;
+  border-color: #dddddd;
 }
 
 .contribute {
   font-size: small;
   width: 100%;
   text-align: center;
+}
+
+a .contribute{
+  text-decoration: underline;
+  transition: 0.6s all cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+a:hover,
+a:focus {
+  color: white;
+  background: none;
 }
 </style>
