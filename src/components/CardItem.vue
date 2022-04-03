@@ -1,104 +1,142 @@
 <script>
-export default
-{
+export default {
   props: {
     icon: {
       type: String,
-      required: true,
-      default: "https://picsum.photos/128",
+      default: "https://img.icons8.com/color/344/courses.png",
     },
     title: {
       type: String,
-      default: "Title lorem ipsum"
+      default: "Title lorem ipsum",
     },
     description: {
       type: String,
-      default:
-      `
+      default: `
       Description, lorem ipsum dolor sit amet brown fox jumped over the lazy dog. <br>
       <br>This <b>should</b> be on a new line <br>
       <br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet arcu augue, eget consectetur urna bibendum ac. Sed ac augue at est tincidunt sagittis sed id est. Nam feugiat arcu sem, vitae congue lacus lacinia eget. Vestibulum sit amet tempor turpis. Proin non posuere diam. Suspendisse facilisis tempor sodales. Aliquam erat volutpat. Suspendisse vehicula arcu mauris, nec mollis arcu vulputate sit amet. Mauris vitae nisi a velit fermentum interdum ac vel massa. Morbi ante risus, blandit non odio at, suscipit ornare libero. Suspendisse potenti. Vestibulum eget nibh augue. Aliquam erat volutpat.
+      Lorem ipsum dolor sit ametpat.
 `,
     },
     tags_array: {
       type: Array,
       default: [
-        	{
-            text: "this is a tag #1",
-           style: "background-color: #0088FF;"},
-        	{
-            text: "this is another tag #2",
-           style: "background-color:#00DD44;"},
-        	{
-            text: "and another one #3",
-           style: "background-color: #FF4400;"},
-        	{
-            text: "and a very long tag : lorem ipsum dolor sit amet #4",
-           style: "background-color: #FF0000;"},
+        {
+          text: "this is a tag #1",
+          style: "background-color: #0088FF;",
+        },
+        {
+          text: "this is another tag #2",
+          style: "background-color:#00DD44;",
+        },
+        {
+          text: "and another one #3",
+          style: "background-color: #FF4400;",
+        },
+        {
+          text: "and a very long tag : lorem ipsum dolor sit amet #4",
+          style: "background-color: #FF0000;",
+        },
       ],
-    }
+    },
   },
-  data(){
-    return {
-
-    }
-  }
-}
+  data() {
+    return {};
+  },
+};
 </script>
 
 <template>
   <div class="card-div">
     <div class="title-div">
-      <img class="module-icon" :src="icon" alt="Module Icon">
+      <img class="module-icon" :src="icon" alt="Module Icon" />
       <h1 class="title">{{ title }}</h1>
     </div>
     <p class="description"><span v-html="description"></span></p>
-    <li class="tags-div" >
-      <ul class="tag" v-for="tag in tags_array" :key="tag.text" :style="tag.style">{{ tag.text }}</ul>
+    <li class="tags-div">
+      <ul
+        class="tag"
+        v-for="tag in tags_array"
+        :key="tag.text"
+        :style="tag.style"
+      >
+        {{
+          tag.text
+        }}
+      </ul>
     </li>
   </div>
 </template>
 
 <style scoped>
 
-  *- {
-    border: blue 0.2px dotted;
-  }
+/* * {
+  border: green solid 1px;
+} */
 
 .card-div {
-  margin: 2em;
+  color: #dddddd;
+  margin: 0.4em;
   padding: 1em;
-  border-radius: 1em;
-  border: black solid 1px;
-  background-color: white;
+  width: min-content;
+  /* max-width: 20vw; */
 
-  box-shadow: 0 0 1em 0.1em #000000;
+  font-size: normal;
+  /* word-break: break-all; */
+
+  border-radius: 1em;
+
+  background-color: #222222;
+
+  box-shadow: 0 0.2em 2em 0.01em #00000044;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: content;
 
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 
-  transition: transform 0.2s;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12);
+  transform: scale(0.99);
+
+  cursor: pointer;
 }
 
-  .title-div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-  }
+.title-div {
+  width: fit-content;
+  margin: 0.1em;
+  padding: 0.1em;
+  /* width: 100%; */
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-  .description {
-    padding: 1em;
-  	box-shadow: 0 0 0.5em 0.01em #000000;
-    border-radius: 1em;
-  }
+.title {
+  font-size: 100%;
+}
+.description {
+  width: fit-content;
+  height: fit-content;
+  margin: 0.4em 0;
+  padding: 0.1em 1em;
+  box-shadow: 0 0 0.5em 0.01em #00000066;
+  border-radius: 0.4em;
+
+  word-break: break-word;
+}
 
 img {
   display: inline-block;
-  margin: 1em;
+  /* filter: brightness(0) invert(1); */
+  margin: 0 0.4em;
   border-radius: 1em;
-  }
+  height: 5em;
+}
 
 h1 {
   display: inline-block;
@@ -108,27 +146,37 @@ h1 {
 }
 
 .tags-div {
-  padding: 1em;
+  width: fit-content;
+  padding: 0.1em;
   display: flex;
   flex-wrap: wrap;
 }
 
-.tags-div, .tag{
+.tags-div,
+.tag {
   list-style-type: none;
 }
 
-  .tag {
-    display: inline-block;
-  	margin: 0.2em;
-    padding: 0.2em 0.8em;
-    text-transform: uppercase;
-    font-size: small;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    border-radius: 0.8em;
-  }
+.tag {
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.2em 0.8em;
 
+  text-transform: uppercase;
+  word-break: break-all;
+  font-size: 0.6em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.4em;
 
+  transition: .8s transform cubic-bezier(.155,1.105,.295,1.12);
+}
 
+.tag:hover,
+.card-div:hover {
+  border: #dddddd solid 1px;
+
+  transform: scale(1.04) translateY(-0.4vh);
+  z-index: 1;
+}
 </style>
